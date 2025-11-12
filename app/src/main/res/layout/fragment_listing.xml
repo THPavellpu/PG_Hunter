@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- 💸 Price Filter -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rentInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Max Rent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 🔀 Sort Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSortLowToHigh"
+            android:backgroundTint="@color/red_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Low → High" android:layout_height="50dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSortHighToLow"
+            android:backgroundTint="@color/red_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="High → Low"
+            android:layout_marginStart="8dp" android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPGs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"/>
+</LinearLayout>
